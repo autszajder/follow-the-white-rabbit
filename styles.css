@@ -1,0 +1,262 @@
+:root {
+  color-scheme: dark;
+  --bg: #090909;
+  --panel: #181818;
+  --panel-soft: #222222;
+  --text: #f5f5f5;
+  --muted: #b8b8b8;
+  --line: #343434;
+  --accent: #ffc533;
+  --accent-strong: #ff8a1c;
+  --danger: #ff4b3e;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 197, 51, 0.14), transparent 34rem),
+    radial-gradient(circle at top right, rgba(255, 75, 62, 0.10), transparent 30rem),
+    var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-header,
+.site-footer,
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 0;
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 14px;
+  color: var(--muted);
+  background: rgba(24, 24, 24, 0.72);
+}
+
+.nav a[aria-current="page"],
+.nav a:hover,
+.nav a:focus {
+  color: var(--text);
+  border-color: rgba(255, 197, 51, 0.72);
+  text-decoration: none;
+}
+
+.hero {
+  padding: 78px 0 42px;
+}
+
+.hero.compact {
+  padding-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 840px;
+  margin-bottom: 16px;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.15;
+}
+
+.tagline {
+  max-width: 760px;
+  margin-bottom: 16px;
+  color: var(--text);
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  font-weight: 700;
+}
+
+.intro {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0 18px;
+  font-weight: 800;
+}
+
+.button.primary {
+  color: #16120a;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+}
+
+.button.secondary {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(34, 34, 34, 0.72);
+}
+
+.button:hover,
+.button:focus {
+  text-decoration: none;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 18px;
+  padding: 18px 0 48px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(34, 34, 34, 0.92), rgba(24, 24, 24, 0.94));
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+.feature-card {
+  border-color: rgba(255, 197, 51, 0.34);
+}
+
+.feature-list,
+.policy ul {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.feature-list li,
+.policy li {
+  margin: 7px 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.policy {
+  margin-bottom: 48px;
+}
+
+.policy h2 {
+  margin-top: 28px;
+  font-size: 1.25rem;
+}
+
+.policy h2:first-child {
+  margin-top: 0;
+}
+
+.policy p {
+  color: var(--muted);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding: 24px 0 36px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 18px;
+    padding: 18px;
+  }
+}
