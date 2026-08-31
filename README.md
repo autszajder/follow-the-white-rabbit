@@ -8,6 +8,13 @@ https://autszajder.github.io/follow-the-white-rabbit/
 Privacy Policy URL:
 https://autszajder.github.io/follow-the-white-rabbit/privacy.html
 
+App-specific privacy policies use one directory per app:
+
+- BoxTimer: https://autszajder.github.io/follow-the-white-rabbit/privacy.html
+- MotoGarage: https://autszajder.github.io/follow-the-white-rabbit/motogarage/privacy.html
+
+Future apps can follow the same structure, for example `petlegacy/privacy.html`.
+
 Support contact placeholder:
 support@example.com
 
